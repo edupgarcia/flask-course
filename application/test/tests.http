@@ -4,3 +4,37 @@ GET http://localhost:5000 HTTP/1.1
 ###
 
 GET http://localhost:5000/user HTTP/1.1
+
+###
+
+GET http://localhost:5000/api/user HTTP/1.1
+
+###
+
+GET http://localhost:5000/api/user/2 HTTP/1.1
+
+###
+
+POST http://localhost:5000/api/user HTTP/1.1
+content-type: application/json
+
+{
+    "first_name": "Budd", 
+    "last_name": "Zellick", 
+    "email": "buddzellick1@uol.com.br", 
+    "password": "kik8N0cyKG"
+}
+
+###
+PUT http://localhost:5000/api/user/22 HTTP/1.1
+content-type: application/json
+
+{
+    "first_name": "Buddy", 
+    "last_name": "Zellick", 
+    "email": "buddyzellick1@uol.com.br", 
+    "password": "kik8N0cyKG"
+}
+
+###
+DELETE http://localhost:5000/api/user/22 HTTP/1.1

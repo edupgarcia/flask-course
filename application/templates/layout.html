@@ -10,6 +10,12 @@
 
     <div class="container-fluid text-center top-container">
         <img src="{{ url_for('static',filename='images/uta-logo-200.png')}}">
+
+            {% if session['username'] %}
+                <span class="user">
+                    Welcome, {{ session['username'] }}
+                </span>
+            {% endif %}
     </div>
         <div class="container">
 
@@ -18,7 +24,7 @@
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}
-                        <div class="alert lert-{{category}}">
+                        <div class="alert alert-{{category}}">
                             <p>
                                 {{ message }}
                             </p>                        
